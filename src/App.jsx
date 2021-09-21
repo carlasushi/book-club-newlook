@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "./logo.svg";
+import BooksContainer from "./components/Bookscontainer";
 
 const App = () => {
   const [books, setBooks] = useState([]);
@@ -11,7 +11,7 @@ const App = () => {
         const response = await fetch(
           "https://bookclub-books-api.herokuapp.com/books"
         );
-        console.log(`successful response here: `, response);
+        console.log(`successful response: `, response);
 
         const books = await response.json();
         console.log(`json-ified response after successful response: `, books);
@@ -25,7 +25,11 @@ const App = () => {
 
   console.log(`books array: `, books);
 
-  return <div>Getting started</div>;
+  return (
+    <>
+      <BooksContainer books={books} />
+    </>
+  );
 };
 
 export default App;
