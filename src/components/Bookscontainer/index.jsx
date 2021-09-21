@@ -1,14 +1,14 @@
 import React from "react";
 import { Container, H2, BookList } from "./styles";
-import Book from '../Book'
+import Book from "../Book";
 
-const BooksContainer = ({books}) => (
+const BooksContainer = ({ books }) => (
   <Container>
     <H2>All Books</H2>
     <BookList>
-        {books.map((book) => (
-            <Book key={book.id} book={book}/>
-        ))}
+      {books.slice().reverse().map((book) => (
+        <Book key={book.id} book={book} />
+      ))}
     </BookList>
   </Container>
 );

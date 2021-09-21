@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Cover, Title, Author} from './styles'
+import {Container, Cover, Title, Author, SelectedBy, ReadBy} from './styles'
 
 const Book = ({book}) => (
     <Container>
@@ -7,6 +7,8 @@ const Book = ({book}) => (
         <figcaption>
             <Title>{book.title}</Title>
             <Author>{book.author}</Author>
+            <SelectedBy> Suggested by {book.selected_by}</SelectedBy>
+            <ReadBy>{book.month_read}, {book.year_read} </ReadBy>
         </figcaption>
     </Container>
 )
