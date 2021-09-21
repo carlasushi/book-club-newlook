@@ -11,7 +11,7 @@ const App = () => {
         const response = await fetch(
           "https://bookclub-books-api.herokuapp.com/books"
         );
-        console.log(`successful response: `, response);
+        console.log(`successful response here: `, response);
 
         const books = await response.json();
         console.log(`json-ified response after successful response: `, books);
