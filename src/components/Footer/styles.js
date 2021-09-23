@@ -5,7 +5,6 @@ export const FooterContainer = styled.footer`
     background: #5c7f94;
     border-top: 2px solid #000;
     padding: .25em 2.5em;
-    f
 
     display: flex;
     flex-direction: column;
@@ -15,5 +14,17 @@ export const FooterContainer = styled.footer`
 
     @media (max-width: 800px) {
         font-size: .75rem;
+    }
+    a:link {
+        color: #f3ecf2;
+    }
+    a:visited {
+        color: yellow;
+    }
+    a:hover {
+        color: #D17375;
+    }
+    a:active {
+        color: blue;
     }
 `
