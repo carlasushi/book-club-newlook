@@ -39,7 +39,7 @@ export const SelectedBy = styled.h5`
 
 export const ReadBy = styled.h6`
   font-size: .65rem;
-  margin 0;
+  margin: 0;
   line-height: 1.8;
   font-family: "Monserrat", sans-serif;
 `

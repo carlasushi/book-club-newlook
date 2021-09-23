@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import BooksContainer from "./components/Bookscontainer";
+import { GlobalStyle } from "./styles";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [books, setBooks] = useState([]);
@@ -27,7 +30,10 @@ const App = () => {
 
   return (
     <>
+      <GlobalStyle/>
+      <Header/>
       <BooksContainer books={books} />
+      <Footer/>
     </>
   );
 };
