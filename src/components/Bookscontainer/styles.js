@@ -19,7 +19,7 @@ export const H2 = styled.h2`
   }
 `;
 
-export const BookClubInfo = styled.div  `
+export const BookClubInfo = styled.div`
   font-size: 1.25rem;
   text-align: justify;
   margin: 0 0 0.5em 0;
@@ -29,7 +29,7 @@ export const BookClubInfo = styled.div  `
   justify-content: center;
   align-content: center;
   line-height: 1.8;
-  
+
   @media (max-width: 800px) {
     font-size: 1rem;
     line-height: 1.2;
@@ -50,7 +50,7 @@ export const BookList = styled.div`
   }
 
   @media (max-width: 600px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     grid-column-gap: 1.25em;
   }
 `;
