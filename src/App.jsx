@@ -12,7 +12,7 @@ const App = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://bookclub-books-api.herokuapp.com/books"
+          "https://cors-anywhere.herokuapp.com/https://bookclub-books-api.herokuapp.com/books"
         );
         console.log(`successful response: `, response);
 
@@ -30,10 +30,10 @@ const App = () => {
 
   return (
     <>
-      <GlobalStyle/>
-      <Header/>
+      <GlobalStyle />
+      <Header />
       <BooksContainer books={books} />
-      <Footer/>
+      <Footer />
     </>
   );
 };
