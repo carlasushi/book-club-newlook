@@ -5,8 +5,9 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 const App = () => {
-  const [books, setBooks] = useState([]);
-  console.log("component rendering now ------- ");
+  const [books, setBooks] = useState([]); // start w an empty array
+  const [selectedBook, setSelectedBook] = useState(null) //start w null bc unselected
+  // console.log("component rendering now ------- ");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -14,10 +15,10 @@ const App = () => {
         const response = await fetch(
           "https://cors-anywhere.herokuapp.com/https://bookclub-books-api.herokuapp.com/books"
         );
-        console.log(`successful response: `, response);
+        // console.log(`successful response: `, response);
 
         const books = await response.json();
-        console.log(`json-ified response after successful response: `, books);
+        // console.log(`json-ified response after successful response: `, books);
         setBooks(books); // update array if response ok
       } catch (errors) {
         console.log(errors);
@@ -26,13 +27,19 @@ const App = () => {
     fetchData();
   }, []);
 
-  console.log(`books array: `, books);
+  // console.log(`books array: `, books);
+
+  const pickBook = (book) => {
+    setSelectedBook(book) // from initial null
+  }
+
+  console.log(selectedBook) // checking click event 
 
   return (
     <>
       <GlobalStyle />
       <Header />
-      <BooksContainer books={books} />
+      <BooksContainer books={books} pickBook={pickBook} />
       <Footer />
     </>
   );
