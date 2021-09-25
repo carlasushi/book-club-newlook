@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.figure`
-  cursor: pointer;
+  cursor: ${({$isLarge}) => ($isLarge ? 'default': 'pointer')}; // cursor for panel vs Bookscontainer 
   margin: 0;
 `;
 
 export const Cover = styled.img`
-  filter: grayscale(100%);
+  // filter: grayscale(100%);
   border: 2px solid #000;
   object-fit: cover;
   aspect-ratio: 2 / 3;
@@ -15,10 +15,18 @@ export const Cover = styled.img`
 `;
 
 export const Title = styled.h3`
-  font-size: 1.75rem;
+  font-size: ${({$isLarge}) => ($isLarge ? '2.625rem': '1.75rem')}; // font size for panel vs Bookscontainer 
   margin: 0 0 0.625em 0;
   line-height: 1.3;
   font-family: 'Roboto Mono', monospace;
+
+  @media (max-width: 800px) {
+    font-size: ${({$isLarge}) => ($isLarge ? '2rem': '1.375rem')}; //  font size for panel vs Bookscontainer 
+  }
+
+  @media (max-width: 800px) {
+    font-size: ${({$isLarge}) => ($isLarge ? '1.375rem': '1rem')}; //  font size for panel vs Bookscontainer 
+  }
 `;
 
 export const Author = styled.h4`

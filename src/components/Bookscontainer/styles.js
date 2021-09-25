@@ -17,6 +17,10 @@ export const H2 = styled.h2`
   @media (max-width: 800px) {
     font-size: 2rem;
   }
+
+  @media (max-width: 600px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const BookClubInfo = styled.div`

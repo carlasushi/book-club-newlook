@@ -3,20 +3,21 @@ import BooksContainer from "./components/Bookscontainer";
 import { GlobalStyle } from "./styles";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import DetailPanel from "./components/DetailPanel";
 
 const App = () => {
   const [books, setBooks] = useState([]); // start w an empty array
-  const [selectedBook, setSelectedBook] = useState(null) //start w null bc unselected
+  const [selectedBook, setSelectedBook] = useState(null); //start w null bc unselected
   // console.log("component rendering now ------- ");
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://cors-anywhere.herokuapp.com/https://bookclub-books-api.herokuapp.com/books"
+          "https://bookclub-books-api.herokuapp.com/books"
         );
         // console.log(`successful response: `, response);
-
+        // https://cors-anywhere.herokuapp.com/
         const books = await response.json();
         // console.log(`json-ified response after successful response: `, books);
         setBooks(books); // update array if response ok
@@ -30,16 +31,17 @@ const App = () => {
   // console.log(`books array: `, books);
 
   const pickBook = (book) => {
-    setSelectedBook(book) // from initial null
-  }
+    setSelectedBook(book); // from initial null
+  };
 
-  console.log(selectedBook) // checking click event 
+  // console.log(selectedBook); // checking click event
 
   return (
     <>
       <GlobalStyle />
       <Header />
       <BooksContainer books={books} pickBook={pickBook} />
+      {selectedBook && <DetailPanel book={selectedBook} />} {/* select a book if true, then pass the selectedBook through the panel*/}
       <Footer />
     </>
   );
