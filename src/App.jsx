@@ -44,7 +44,7 @@ const App = () => {
     <>
       <GlobalStyle />
       <Header />
-      <BooksContainer books={books} pickBook={pickBook} />
+      <BooksContainer books={books} pickBook={pickBook} isPanelOpen={selectedBook !== null} />
       {selectedBook && <DetailPanel book={selectedBook} closePanel={closePanel} />}{" "}
       {/* select a book if true, then pass the selectedBook through the panel*/}
       <Footer />

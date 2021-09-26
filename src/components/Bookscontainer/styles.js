@@ -3,8 +3,11 @@ import styled from "styled-components";
 export const Container = styled.div`
   background-color: #f3ecf2;
   padding: 10em 2.5em;
-  overflow: scroll;
 
+  // preventing scroll in main container when side panel opened
+  overflow: ${({$isPanelOpen}) => ($isPanelOpen ?'hidden':'scroll' )}; 
+  position: ${({$isPanelOpen}) => ($isPanelOpen ?'fixed':'unset' )}; 
+  
   @media (max-width: 800px) {
     padding: 7.125em 1.25em;
   }
@@ -58,3 +61,4 @@ export const BookList = styled.div`
     grid-column-gap: 1.25em;
   }
 `;
+

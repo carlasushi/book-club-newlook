@@ -101,3 +101,14 @@ export const CloseWrapper = styled.div`
 `
 
 // blurry background, clickable, closes DetailPanel
+
+export const BG = styled.div`
+    background: rgba(144, 185, 143, .5); 
+    cursor: pointer;
+    // cover all view port
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top:0;
+    z-index: 1; // above book list yet below header and detail panel.
+`
