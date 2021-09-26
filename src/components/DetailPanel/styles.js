@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Panel = styled.article`
-    background-color: #b38b7f;
+    background-color: #F2E8B2;
     border-left: 2px solid #000;
     
     height: 90%;
@@ -31,7 +31,7 @@ export const Panel = styled.article`
         margin: 0 auto;
         padding: .8em .9em .5em .9em;
         width: 100vw;
-        height: 86%;
+        height: 89.3%;
         bottom: 0; // only sliding vertically from bottom
         right: unset;
     }
@@ -46,3 +46,58 @@ export const P = styled.p`
 export const Em = styled.em`
     font-style: italic;
 `
+
+export const Close = styled.button`
+    background: none;
+    border:0;
+    cursor: pointer;
+    height: 1.5em;
+    width: 1.5em;
+    padding: 0;
+    position: relative;
+
+    &::before,
+    &::after {
+        background-color: #000;
+        content: '';
+        height: 1.5em;
+        width: .125em;
+        position: absolute;
+        top:0;
+        left:.5625em;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+`
+
+export const CloseWrapper = styled.div`
+    background: none;
+    border: 2px solid #000;
+    border-radius: 30px;
+    height: 1.25em;
+    width: 1.25em;
+    padding: .5em;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    // positional properties
+    overflow: hidden;
+    cursor: pointer;
+    top: 7.5em;
+    right: 2.5em;
+    position: fixed;
+    z-index: 4;
+    
+    @media (max-width: 880px) {
+        top:unset;
+        bottom: 1.25em;
+        right: 1.25em;
+    }
+`
+
+// blurry background, clickable, closes DetailPanel

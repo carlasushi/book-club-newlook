@@ -30,18 +30,23 @@ const App = () => {
 
   // console.log(`books array: `, books);
 
+
   const pickBook = (book) => {
     setSelectedBook(book); // from initial null
   };
-
   // console.log(selectedBook); // checking click event
+
+  const closePanel = () => {
+    setSelectedBook(null);
+  }
 
   return (
     <>
       <GlobalStyle />
       <Header />
       <BooksContainer books={books} pickBook={pickBook} />
-      {selectedBook && <DetailPanel book={selectedBook} />} {/* select a book if true, then pass the selectedBook through the panel*/}
+      {selectedBook && <DetailPanel book={selectedBook} closePanel={closePanel} />}{" "}
+      {/* select a book if true, then pass the selectedBook through the panel*/}
       <Footer />
     </>
   );

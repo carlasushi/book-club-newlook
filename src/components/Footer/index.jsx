@@ -13,11 +13,15 @@ const Footer = () => (
             <li>
             {" "}
             Oh no! I have not finished the book, can I still join the hangout?
-            Yes!
+            YEs
             </li>
             <li>
             I have previously read the book of the month; what should I do?
-            Whatever you feel like.
+            If inspired, join the gathering. 
+            </li>
+            <li>
+            How do you choose the books?
+            We take turns to make a short selection list. Then we vote for one book (poll).
             </li>
             <li>Can I invite my friends to join? Yes!</li>
             <li>The book is not in Genesis lib? Check the local library.</li>
@@ -28,11 +32,11 @@ const Footer = () => (
         </div>
         <div>
         You can download almost everything from{" "}
-        <a target="_blank" href="https://libgen.rs/">
+        <a target="_blank" rel="noreferrer" href="https://libgen.rs/">
             Genesis Library
         </a>
         . Maybe, use{" "}
-        <a href="https://calibre-ebook.com/" target="_blank">
+        <a href="https://calibre-ebook.com/" rel="noreferrer" target="_blank">
             Calibre
         </a>{" "}
         to transfer books to your e-reader.
