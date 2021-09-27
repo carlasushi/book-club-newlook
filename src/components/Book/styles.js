@@ -10,7 +10,7 @@ export const Cover = styled.img`
   border: 2px solid #000;
   object-fit: cover;
   aspect-ratio: 2 / 3;
-  width: 100%;
+  width: ${({$isLarge}) => ($isLarge ? '50%': '100%')};
   margin-bottom: 1rem;
 `;
 

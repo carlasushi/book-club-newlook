@@ -33,7 +33,6 @@ const App = () => {
 
   // console.log(`books array: `, books);
 
-
   const pickBook = (book) => {
     setSelectedBook(book); // from initial null
     setShowPanel(true); // from initial false
@@ -50,9 +49,13 @@ const App = () => {
     <>
       <GlobalStyle />
       <Header />
-      <BooksContainer books={books} pickBook={pickBook} isPanelOpen={showPanel}/> {/* isPanelOpen={selectedBook !== null} updated to isPanelOpen={showPanel} bc of animation */}
+      <BooksContainer 
+        books={books} 
+        pickBook={pickBook} 
+        isPanelOpen={showPanel}
+        /> {/* isPanelOpen={selectedBook !== null} updated to isPanelOpen={showPanel} bc of animation */}
       <Transition in={showPanel} timeout={300}>
-        {/* updated with render props  ** {selectedBook && <DetailPanel book={selectedBook} closePanel={closePanel} />}{" "}select a book if true, then pass the selectedBook through the panel */}
+        {/* updated with render props  ** {selectedBook && <DetailPanel book={selectedBook} closePanel={closePanel} />}select a book if true, then pass the selectedBook through the panel */}
         {(state) => <DetailPanel book={selectedBook} closePanel={closePanel} state={state} />}  
       </Transition>
       <Footer />

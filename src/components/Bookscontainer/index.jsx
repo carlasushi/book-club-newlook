@@ -35,7 +35,12 @@ const BooksContainer = ({books, pickBook,isPanelOpen }) => {
   return (
       <Container $isPanelOpen={isPanelOpen} $top={scroll}> {/* links to bookcontainer's style */}
         <H2>This is a collection of books we have chosen for our online book club.</H2>
-        <H2> Save the date! HERE </H2>
+        <H2> 
+          <a target="_blank" rel="noreferrer" href="https://lu.ma/q466j18y">
+            Link to Luma event 
+          </a>
+        </H2>
+        
     
         <BookList>
           {books.slice().reverse().map((book) => (

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background-color: #f3ecf2;
+  background-color: #E0e2db;
   padding: 10em 2.5em;
 
   // preventing scroll in main container when side panel opened

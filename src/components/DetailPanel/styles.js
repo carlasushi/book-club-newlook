@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Panel = styled.article`
-    background-color: #F2E8B2;
+    background-color: #ECEDE8;
     border-left: 2px solid #000;
     
     // height: 90%;
@@ -18,10 +18,14 @@ export const Panel = styled.article`
     box-sizing: border-box;
     padding: 2.5em 7.5em 3.75em 2.5em;
     overflow: scroll; // independent from the rest of the page
+    // display:flex;
+    // flex-direction: column;
+    // justify-content: space-between;
+    // align-items: flex-end;
 
     @media (max-width: 800px) {
         border-left: none;
-        padding: 40px 86px 20px 20px;
+        padding: 3.3em 5.375em 1.25em 1.25em;
         width: 95vw;
         height: calc(100vh - 10.4em);
         // bottom: 0; only sliding vertically from bottom 
@@ -36,7 +40,7 @@ export const Panel = styled.article`
         border-left: none;
         margin-right: 1em;
         padding: .8em .9em .5em .9em;
-        width: 92vw;
+        width: 95vw;
         height: calc(100vh - 7.9em);
         // adapting to animation
         bottom: ${({$state}) => ($state === 'entering' || $state === 'entered' ? 0 : '-100%')};
@@ -69,10 +73,10 @@ export const Close = styled.button`
 
     &::before,
     &::after {
-        background-color: #000;
+        background-color: #D17375;
         content: '';
         height: 1.5em;
-        width: .125em;
+        width: .325em;
         position: absolute;
         top:0;
         left:.5625em;
@@ -113,7 +117,7 @@ export const CloseWrapper = styled.div`
 // blurry background, clickable, closes DetailPanel
 
 export const BG = styled.div`
-    background: rgba(144, 185, 143, .5); 
+    background: rgba(136, 150, 150, .6git ); 
     cursor: pointer;
     // cover all view port
     position: fixed;
