@@ -3,6 +3,7 @@ import BooksContainer from "./components/Bookscontainer";
 import { GlobalStyle } from "./styles";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Search from "./components/Search"
 import DetailPanel from "./components/DetailPanel";
 import { Transition } from "react-transition-group";
 
@@ -48,7 +49,9 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-      <Header />
+      <Header>
+        <Search />
+      </Header>
       <BooksContainer 
         books={books} 
         pickBook={pickBook} 

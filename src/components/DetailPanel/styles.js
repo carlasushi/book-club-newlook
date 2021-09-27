@@ -18,16 +18,16 @@ export const Panel = styled.article`
     box-sizing: border-box;
     padding: 2.5em 7.5em 3.75em 2.5em;
     overflow: scroll; // independent from the rest of the page
-    // display:flex;
-    // flex-direction: column;
-    // justify-content: space-between;
-    // align-items: flex-end;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: initial;
 
     @media (max-width: 800px) {
         border-left: none;
         padding: 3.3em 5.375em 1.25em 1.25em;
         width: 95vw;
-        height: calc(100vh - 10.4em);
+        height: calc(100vh - 11.2em);
         // bottom: 0; only sliding vertically from bottom 
         // adapting to animation
         bottom: ${({$state}) => ($state === 'entering' || $state === 'entered' ? 0 : '-100%')};
@@ -61,7 +61,7 @@ export const P = styled.p`
 export const Em = styled.em`
     font-style: italic;
 `
-
+// creating an x shape
 export const Close = styled.button`
     background: none;
     border:0;
@@ -73,10 +73,10 @@ export const Close = styled.button`
 
     &::before,
     &::after {
-        background-color: #D17375;
+        background-color: #000;
         content: '';
         height: 1.5em;
-        width: .325em;
+        width: .225em;
         position: absolute;
         top:0;
         left:.5625em;
@@ -89,9 +89,9 @@ export const Close = styled.button`
         transform: rotate(-45deg);
     }
 `
-
+// circle around x for closing 
 export const CloseWrapper = styled.div`
-    background: none;
+    background: #d17375;
     border: 2px solid #000;
     border-radius: 30px;
     height: 1.25em;

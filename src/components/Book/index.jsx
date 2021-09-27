@@ -3,7 +3,7 @@ import {Container, Cover, Title, Author, SelectedBy, ReadBy} from './styles'
 // isLarge means detail panel side view
 const Book = ({book, pickBook, isLarge}) => (
     <Container $isLarge={isLarge} onClick={() => pickBook && pickBook(book)}>
-        <Cover alt={`Book cover for ${book.title} by ${book.author}`} src={book.image}/>
+        <Cover $isLarge={isLarge}  alt={`Book cover for ${book.title} by ${book.author}`} src={book.image}/>
         <figcaption>
             <Title $isLarge={isLarge}>{book.title}</Title>
             <Author>{book.author}</Author>
