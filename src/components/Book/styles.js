@@ -23,10 +23,6 @@ export const Title = styled.h3`
   @media (max-width: 800px) {
     font-size: ${({$isLarge}) => ($isLarge ? '2rem': '1.375rem')}; //  font size for panel vs Bookscontainer 
   }
-
-  @media (max-width: 800px) {
-    font-size: ${({$isLarge}) => ($isLarge ? '1.375rem': '1rem')}; //  font size for panel vs Bookscontainer 
-  }
 `;
 
 export const Author = styled.h4`

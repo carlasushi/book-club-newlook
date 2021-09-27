@@ -1,6 +1,6 @@
 import React from 'react'
 import {Container, Cover, Title, Author, SelectedBy, ReadBy} from './styles'
-
+// isLarge means detail panel side view
 const Book = ({book, pickBook, isLarge}) => (
     <Container $isLarge={isLarge} onClick={()=> pickBook(book)}>
         <Cover alt={`Book cover for ${book.title} by ${book.author}`} src={book.image}/>

@@ -26,23 +26,6 @@ export const H2 = styled.h2`
   }
 `;
 
-export const BookClubInfo = styled.div`
-  font-size: 1.25rem;
-  text-align: justify;
-  margin: 0 0 0.5em 0;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-  line-height: 1.8;
-
-  @media (max-width: 800px) {
-    font-size: 1rem;
-    line-height: 1.2;
-  }
-`;
-
 export const BookList = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);

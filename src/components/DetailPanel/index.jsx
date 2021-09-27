@@ -1,27 +1,30 @@
 import React from 'react'
 import {Panel, P, Em, Close, CloseWrapper, BG} from './styles'
 import Book from '../Book'
-import BooksContainer from '../Bookscontainer'
 
-const DetailPanel = ({book, closePanel}) => (
-    <>
-        <BG onClick={closePanel}/>
-        <Panel>
-            <CloseWrapper onClick={closePanel}>
+const DetailPanel = ({book, closePanel, state}) => {
+    console.log(state)
+    return (
+        <>
+        <BG onClick={closePanel} $state={state}/>
+        <Panel $state={state}>
+            <CloseWrapper onClick={closePanel} $state={state}>
                 <Close />
             </CloseWrapper>
-            <Book book={book} isLarge={true}/>
-            {/* <figure book={book}>
-                <img alt=" " src={book.image}/>
-                <h3>{book.title}</h3>
-                <h4>by {book.author}</h4>
-            </figure> */}
-            <P>{book.description}</P>
-            <p>
-                <Em>Published in {book.published}. </Em>
-            </p>
+
+            {/* only render if there is a valid book component */}
+            {book && (
+                <>
+                    <Book book={book} isLarge={true}/>
+                    <P>{book.description}</P>
+                    <p>
+                        <Em>Published in {book.published}. </Em>
+                    </p>
+                </>
+            )}   
         </Panel>
     </>
-)
+    )
+}
 
 export default DetailPanel
