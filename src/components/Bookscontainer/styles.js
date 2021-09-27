@@ -7,7 +7,8 @@ export const Container = styled.div`
   // preventing scroll in main container when side panel opened
   overflow: ${({$isPanelOpen}) => ($isPanelOpen ?'hidden':'scroll' )}; 
   position: ${({$isPanelOpen}) => ($isPanelOpen ?'fixed':'unset' )}; 
-  
+  top: ${({$isPanelOpen, $top}) => ($isPanelOpen ?`-${$top}px`: 0 )};
+
   @media (max-width: 800px) {
     padding: 7.125em 1.25em;
   }
