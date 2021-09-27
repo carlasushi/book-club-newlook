@@ -93,7 +93,7 @@ export const CloseWrapper = styled.div`
     height: 1.25em;
     width: 1.25em;
     padding: .5em;
-    display: flex;
+    display: ${({$state}) => ($state == 'entered' ? 'flex' : 'none')};
     align-items:center;
     justify-content: center;
     // positional properties
