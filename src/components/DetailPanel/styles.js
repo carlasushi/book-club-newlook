@@ -117,7 +117,7 @@ export const CloseWrapper = styled.div`
 // blurry background, clickable, closes DetailPanel
 
 export const BG = styled.div`
-    background: rgba(136, 150, 150, .6git ); 
+    background: rgba(136, 150, 150, .6 ); 
     cursor: pointer;
     // cover all view port
     position: fixed;
