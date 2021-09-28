@@ -91,7 +91,7 @@ export const Close = styled.button`
 `
 // circle around x for closing 
 export const CloseWrapper = styled.div`
-    background: #d17375;
+    background: #E0E2db;
     border: 2px solid #000;
     border-radius: 30px;
     height: 1.25em;

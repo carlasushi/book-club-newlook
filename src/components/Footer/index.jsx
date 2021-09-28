@@ -25,21 +25,64 @@ const Footer = () => (
             </li>
             <li>Can I invite my friends to join? Yes!</li>
             <li>The book is not in Genesis lib? Check the local library.</li>
+            <li>I can't come to the next gathering, what should I do? nothing, we will wait for 5 mins for all members to show up. If you can't join don't worry!</li>
         </ul>
         </div>
         <div>
-        <h1>Members °˖✧◝(⁰▿⁰)◜✧˖°</h1>
-        </div>
-        <div>
-        You can download almost everything from{" "}
-        <a target="_blank" rel="noreferrer" href="https://libgen.rs/">
-            Genesis Library
-        </a>
-        . Maybe, use{" "}
-        <a href="https://calibre-ebook.com/" rel="noreferrer" target="_blank">
-            Calibre
-        </a>{" "}
-        to transfer books to your e-reader.
+            <div>
+                <h1>Where/how to find books °˖✧◝(⁰▿⁰)◜✧˖°</h1>
+                <ul>
+                    <li>
+                    You can try your local library in person. For digital access to their collection try:{" "}
+                    <a target="_blank" rel="noreferrer" href="https://www.overdrive.com/">
+                        OverDrive | Libby 
+                    </a>
+                    </li>
+                    <li>
+                        You can download ALMOST everything from{" "}
+                        <a target="_blank" rel="noreferrer" href="https://libgen.rs/">
+                            Genesis Library
+                        </a>.
+                    </li>
+                    <li>
+                        Maybe, use{" "}
+                    <a href="https://calibre-ebook.com/" rel="noreferrer" target="_blank">
+                        Calibre
+                    </a>{" "}
+                    to transfer books to your e-reader.
+                    </li>
+                    
+                </ul>
+            </div>
+            <div>
+                <h1> Members（　◜◡‾）（‾◡◝　）</h1>
+                <ul>
+                    <li>
+                        Allister, really good: handyman/gardener/surfer. <br/> Location: New Zealand. 
+                    </li>
+                    <li>
+                        Carla, likes coding, yoga, riding her bike and making art. <br/> Location: California. 
+                    </li>
+                    <li>
+                        Christoph, tech company CEO/photographer. Loves art and good films. <br/> Location: Germany.
+                    </li>
+                    <li>
+                        Ernie, computer scientist/GP/photographer. Keeps many exotic glamourous fishes. Loves plotting data and complex simulations <br/> Location: Canada. 
+                    </li>
+                    <li>
+                        Irene, founder and manager of Monument House SF, used to be a front-end coder. Loves playing chess. <br/> Location: California.
+                    </li>
+                    <li>
+                        Juliet, art director of Kyoto Experiment, part-time ballerina. <br/> Location: Japan.
+                    </li>
+                    <li>
+                        Robertinho, entrepreneur/surfer/gardener/father.<br/> Location: Republic of Hawai’i.
+                    </li>
+                    <li>
+                    Valerie, co-author of Chinatown Pretty, owns a Vietnamese restaurant. <br/> Location: California.
+                    </li>
+                </ul>
+            </div>
         </div>
     </FooterContainer>
 );

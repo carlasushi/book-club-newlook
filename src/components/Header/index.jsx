@@ -3,7 +3,7 @@ import {Logo, HeaderContainer} from './styles'
 
 const Header = ({children}) => (
   <HeaderContainer>
-    <a href="/">
+    <a href="">
       <Logo title="Book Club logo" />
     </a>
     {children} {/* rendering search component */}
