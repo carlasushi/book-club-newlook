@@ -28,7 +28,7 @@ export const Panel = styled.article`
     @media (max-width: 800px) {
         border-left: none;
         padding: 3.3em 5.375em 1.25em 1.25em;
-        width: 95vw;
+        width: 100vw;
         height: calc(100vh - 11.2em);
         // bottom: 0; only sliding vertically from bottom 
         // adapting to animation
@@ -38,11 +38,11 @@ export const Panel = styled.article`
         }
     }
 
-    @media (min-width: 600px) {
+    @media (max-width: 600px) {
         border-left: none;
         margin-right: 1em;
         padding: .8em .9em .5em .9em;
-        width: 95vw;
+        width: 100vw;
         height: calc(100vh - 7.9em);
         // adapting to animation
         bottom: ${({$state}) => ($state === 'entering' || $state === 'entered' ? 0 : '-100%')};
@@ -86,7 +86,7 @@ export const CloseWrapper = styled(Pill)`
 // blurry background, clickable, closes DetailPanel
 
 export const BG = styled.div`
-    background: rgba(136, 150, 150, .6 ); 
+    background: rgba(136, 150, 150, .8 ); 
     cursor: pointer;
     // cover all view port
     position: fixed;
