@@ -38,7 +38,7 @@ export const Panel = styled.article`
         }
     }
 
-    @media (max-width: 600px) {
+    @media (min-width: 600px) {
         border-left: none;
         margin-right: 1em;
         padding: .8em .9em .5em .9em;
