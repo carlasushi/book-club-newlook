@@ -12,7 +12,7 @@ export const SearchContainer = styled(Pill)`
 
     input, 
     button {
-        display: ${({$showOnDesktop}) => ($showOnDesktop ? 'block' : 'none')}
+        display: ${({$showOnDesktop}) => ($showOnDesktop ? 'block' : 'none')};
 
         @media (max-width: 880px) {
             display: block;

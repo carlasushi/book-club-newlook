@@ -1,8 +1,7 @@
-import React, {useRef} from 'react'
+import React, {useEffect, useRef} from 'react'
 import {Panel, P, Em, CloseWrapper, BG} from './styles'
 import {Close} from '../../styles'
 import Book from '../Book'
-import { useEffect } from 'react/cjs/react.development'
 
 const DetailPanel = ({book, closePanel, state}) => {
     // resetting scroll position of book containers at the top.
