@@ -23,7 +23,7 @@ const BooksContainer = ({books, pickBook, isPanelOpen, title }) => {
     }
   }, [isPanelOpen]) //useEffect will only run when isPanelOpen's value changes
 
-  //console.log(scroll)
+  //console.log(scroll) // tracking "y" coordinates
 
   useEffect(() => {
     if (prevPanelState.current && !isPanelOpen) {
@@ -33,7 +33,7 @@ const BooksContainer = ({books, pickBook, isPanelOpen, title }) => {
   }, [isPanelOpen, prevPanelState, scroll])
   
   return (
-      <Container $isPanelOpen={isPanelOpen} $top={scroll}> {/* links to bookcontainer's style */}
+      <Container $isPanelOpen={isPanelOpen} $top={scroll}> {/* links to book container's style */}
         <H2> 
             <a target="_blank" rel="noreferrer" href="https://lu.ma/q466j18y">
               Link to Luma event 

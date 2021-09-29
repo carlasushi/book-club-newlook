@@ -18,7 +18,6 @@ const Search =({filterBooks}) => {
 
     const showSearch = () => {
         setShowOnDesktop(true)     // render search bar upon click event 
-
     }
 
     return (

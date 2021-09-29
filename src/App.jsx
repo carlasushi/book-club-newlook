@@ -65,6 +65,7 @@ const App = () => {
   // conditionally render the tittle of the book that has been filtered
   // when !== true the booklist has been entirely filtered by book.title
   const hasFiltered = filteredBooks.length !== books.length
+  
   return (
     <>
       <GlobalStyle />
@@ -76,11 +77,13 @@ const App = () => {
         pickBook={pickBook} 
         isPanelOpen={showPanel}
         title={hasFiltered ? 'Search results' : 'All books'}
-        /> {/* isPanelOpen={selectedBook !== null} updated to isPanelOpen={showPanel} bc of animation */}
+      /> {/* isPanelOpen={selectedBook !== null} updated to isPanelOpen={showPanel} bc of animation */}
+
       <Transition in={showPanel} timeout={300}>
         {/* updated with render props  ** {selectedBook && <DetailPanel book={selectedBook} closePanel={closePanel} />}select a book if true, then pass the selectedBook through the panel */}
         {(state) => <DetailPanel book={selectedBook} closePanel={closePanel} state={state} />}  
       </Transition>
+
       <Footer />
     </>
   );
