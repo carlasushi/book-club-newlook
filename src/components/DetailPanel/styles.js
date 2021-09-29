@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import {Pill} from '../../styles.js'
+
 
 export const Panel = styled.article`
     background-color: #ECEDE8;
@@ -32,7 +34,7 @@ export const Panel = styled.article`
         // adapting to animation
         bottom: ${({$state}) => ($state === 'entering' || $state === 'entered' ? 0 : '-100%')};
         right: unset;
-        z-index: 3;
+        z-index: 3; // above wrapper 
         }
     }
 
@@ -61,42 +63,10 @@ export const P = styled.p`
 export const Em = styled.em`
     font-style: italic;
 `
-// creating an x shape
-export const Close = styled.button`
-    background: none;
-    border:0;
-    cursor: pointer;
-    height: 1.5em;
-    width: 1.5em;
-    padding: 0;
-    position: relative;
 
-    &::before,
-    &::after {
-        background-color: #000;
-        content: '';
-        height: 1.5em;
-        width: .225em;
-        position: absolute;
-        top:0;
-        left:.5625em;
-    }
-
-    &::before {
-        transform: rotate(45deg);
-    }
-    &::after {
-        transform: rotate(-45deg);
-    }
-`
 // circle around x for closing 
-export const CloseWrapper = styled.div`
-    background: #E0E2db;
-    border: 2px solid #000;
-    border-radius: 30px;
-    height: 1.25em;
-    width: 1.25em;
-    padding: .5em;
+// inheriting padding from pill component
+export const CloseWrapper = styled(Pill)`
     display: ${({$state}) => ($state === 'entered' ? 'flex' : 'none')};
     align-items:center;
     justify-content: center;
@@ -107,7 +77,6 @@ export const CloseWrapper = styled.div`
     right: 2.5em;
     position: fixed;
     z-index: 4;
-    
     @media (max-width: 880px) {
         top:unset;
         bottom: 1.25em;

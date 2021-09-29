@@ -79,10 +79,12 @@ const Footer = () => (
                         Robertinho, entrepreneur/surfer/gardener/father.<br/> Location: Republic of Hawai’i.
                     </li>
                     <li>
-                    Valerie, co-author of Chinatown Pretty, owns a Vietnamese restaurant. <br/> Location: California.
+                    Valerie, co-author of{" "}
+                    <a href="https://www.goodreads.com/en/book/show/50623378-chinatown-pretty" rel="noreferrer" target="_blank">Chinatown Pretty. </a> <br/> Location: California.
                     </li>
                 </ul>
             </div>
+            <div>Search icon made by <a href="https://www.freepik.com" rel="noreferrer" target="_blank">Freepik</a> from <a href="https://www.flaticon.com/" rel="noreferrer" target="_blank">www.flaticon.com</a></div>
         </div>
     </FooterContainer>
 );

@@ -3,7 +3,7 @@ import { debounce } from "lodash-es";
 import { Container, H2, BookList } from "./styles";
 import Book from "../Book";
 
-const BooksContainer = ({books, pickBook,isPanelOpen }) => {
+const BooksContainer = ({books, pickBook, isPanelOpen, title }) => {
 
   // setting book list's scrolling effect 
   const [scroll, setScroll] = useState(0) // storing the y coordinate scroll position as a coordinate in browser
@@ -34,14 +34,14 @@ const BooksContainer = ({books, pickBook,isPanelOpen }) => {
   
   return (
       <Container $isPanelOpen={isPanelOpen} $top={scroll}> {/* links to bookcontainer's style */}
-        <H2>This is a collection of books we have chosen for our online book club.</H2>
         <H2> 
-          <a target="_blank" rel="noreferrer" href="https://lu.ma/q466j18y">
-            Link to Luma event 
-          </a>
+            <a target="_blank" rel="noreferrer" href="https://lu.ma/q466j18y">
+              Link to Luma event 
+            </a>
         </H2>
-        
-    
+        <H2>
+            {title}  {/* title equals search results or array defined in app.jsx*/}
+        </H2>  
         <BookList>
           {books.slice().reverse().map((book) => (
             <Book key={book.id} book={book} pickBook={pickBook} />
