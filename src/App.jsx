@@ -44,7 +44,6 @@ const App = () => {
   const filterBooks = (searchTerm) => {
       const stringSearch = (bookAttribute, searchTerm) =>
         bookAttribute.toLowerCase().includes(searchTerm.toLowerCase())
-
       if (!searchTerm) {
         setFilteredBooks(books)
       } else {
@@ -63,8 +62,11 @@ const App = () => {
   // console.log(filterBooks('lyons'))
 
   // conditionally render the tittle of the book that has been filtered
-  // when !== true the booklist has been entirely filtered by book.title
+  // when !== true the Booklist has been entirely filtered by book.title
   const hasFiltered = filteredBooks.length !== books.length
+
+   // not filtered books | no matches
+  const noFilteredBooks = filteredBooks.length === 0
   
   return (
     <>
@@ -76,7 +78,8 @@ const App = () => {
         books={filteredBooks} 
         pickBook={pickBook} 
         isPanelOpen={showPanel}
-        title={hasFiltered ? 'Search results' : 'All books'}
+        title={hasFiltered ? 'Search results: ' : 'All books'}
+        noTitle = {noFilteredBooks ? 'No matches found - sorry' : " "}
       /> {/* isPanelOpen={selectedBook !== null} updated to isPanelOpen={showPanel} bc of animation */}
 
       <Transition in={showPanel} timeout={300}>

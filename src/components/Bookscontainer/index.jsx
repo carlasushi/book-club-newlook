@@ -3,7 +3,7 @@ import { debounce } from "lodash-es";
 import { Container, H2, BookList } from "./styles";
 import Book from "../Book";
 
-const BooksContainer = ({books, pickBook, isPanelOpen, title }) => {
+const BooksContainer = ({books, pickBook, isPanelOpen, title, noTitle}) => {
 
   // setting book list's scrolling effect 
   const [scroll, setScroll] = useState(0) // storing the y coordinate scroll position as a coordinate in browser
@@ -19,7 +19,6 @@ const BooksContainer = ({books, pickBook, isPanelOpen, title }) => {
     }
     return() => {
       window.removeEventListener('scroll', handleScroll)//cleaning up all scroll event handlers before useEffect function gets rerun
-
     }
   }, [isPanelOpen]) //useEffect will only run when isPanelOpen's value changes
 
@@ -42,6 +41,9 @@ const BooksContainer = ({books, pickBook, isPanelOpen, title }) => {
         <H2>
             {title}  {/* title equals search results or array defined in app.jsx*/}
         </H2>  
+        <H2>
+           {noTitle}
+        </H2>
         <BookList>
           {books.slice().reverse().map((book) => (
             <Book key={book.id} book={book} pickBook={pickBook} />
