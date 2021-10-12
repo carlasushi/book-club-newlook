@@ -34,8 +34,8 @@ const BooksContainer = ({books, pickBook, isPanelOpen, title, noTitle}) => {
   return (
       <Container $isPanelOpen={isPanelOpen} $top={scroll}> {/* links to book container's style */}
         <H2> 
-            <a target="_blank" rel="noreferrer" href="https://lu.ma/q466j18y">
-              Link to Luma event 
+            <a target="_blank" rel="noreferrer" href="https://lu.ma/carla-paloma">
+              Link to all Luma events
             </a>
         </H2>
         <H2>
