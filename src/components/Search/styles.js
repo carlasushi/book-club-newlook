@@ -42,7 +42,7 @@ export const Wrapper = styled.div`
         align-items: center;
         justify-content: center;
         height: 5.333em;
-        width: 100%;
+        width: 100vw;
         //left bottom corner
         left: 0;
         bottom:0;
