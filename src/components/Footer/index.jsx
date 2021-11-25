@@ -76,7 +76,7 @@ const Footer = () => (
                         Juliet, art director of Kyoto Experiment, part-time ballerina. <br/> Location: Japan.
                     </li>
                     <li>
-                        Robertinho, entrepreneur/surfer/gardener/father.<br/> Location: Republic of Hawai’i.
+                        Robertinho, entrepreneur/surfer/gardener.<br/> Location: Republic of Hawai’i.
                     </li>
                 </ul>
             </div>
