@@ -25,7 +25,7 @@ export const HeaderContainer = styled.header`
   z-index: 3;
 
   @media (max-width: 880px) {
-    padding: 10rem;
-    max-width: 20rem;
+    padding: 1.25em;
+    width: 100vw;
   }
 `;
