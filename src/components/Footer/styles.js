@@ -25,6 +25,7 @@ export const FooterContainer = styled.footer`
 
   @media (max-width: 800px) {
     font-size: 1rem;
+    width:100%;
     h1{ 
       font-size: 2rem;
     }
