@@ -30,7 +30,7 @@ const Footer = () => (
         </div>
         <div>
             <div>
-                <h1>Where/how to find books °˖✧◝(⁰▿⁰)◜✧˖°</h1>
+                <h1>Finding Books</h1>
                 <ul>
                     <li>
                     You can try your local library in person. For digital access to their collection try:{" "}
